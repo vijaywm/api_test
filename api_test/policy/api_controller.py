@@ -12,7 +12,7 @@ import xmltodict
 import json
 
 
-@frappe.whitelist(methods=["GET"])
+@frappe.whitelist(methods=["GET"], allow_guest=True)
 def policy_template(template_id=None):
     if not template_id:
         doc = frappe.new_doc("Insurance Policy Template")
