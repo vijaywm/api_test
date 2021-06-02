@@ -1,0 +1,47 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is an Insurance Policy Engine",
+    "version": "1.0.0",
+    "title": "Insurance Engine"
+  },
+  "basePath": "/api/method",
+  "schemes": ["http", "https"],
+  "paths": {
+    "/api_test.policy.api_controller.policy_template": {
+      "get": {
+        "tags": ["insurance policy template"],
+        "summary": "Create a new policy template",
+        "description": "Create a new template from rating api.",
+        "produces": ["application/xml", "application/json"],
+        "responses": {
+          "default": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/api_test.policy.api_controller.policy_template/{template_id}": {
+      "get": {
+        "tags": ["insurance policy template"],
+        "summary": "Get template by Id",
+        "description": "",
+        "produces": ["application/xml", "application/json"],
+        "parameters": [
+          {
+            "name": "template_id",
+            "in": "path",
+            "description": "The policy that needs to be fetched. ",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    }
+  }
+}
